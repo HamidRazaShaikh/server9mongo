@@ -1,6 +1,5 @@
 var express = require('express');
 var user = express.Router();
-var mongoose = require('mongoose');
 var schema = require('./schema');
 var userModel = schema.userModel;
 
