@@ -14,7 +14,7 @@ mongoose.connect(uri, {useNewUrlParser : true});
 app.use(bodyParser.json({limit: '5000kb'}));
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(cors());
-app.use('/Studentdata', user);
+app.use('/user', user);
 
 
 app.set('port' , process.env.PORT || 4000);

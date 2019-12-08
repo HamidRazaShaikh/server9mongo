@@ -1,7 +1,7 @@
 var express = require('express');
 var user = express.Router();
-var schema = require('./schema');
-var userModel = schema.userModel;
+var Schema = require('./schema');
+var userModel = Schema.userModel;
 
 
 user.post('/add',function (req,res) {
