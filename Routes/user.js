@@ -21,7 +21,7 @@ user.get('/get' , function (req,res) {
     })
 });
 
-user.get('/get?'+ {selection}+"="+{selecText} , function (req,res) {
+user.get('/get?selection = selecText' , function (req,res) {
     userModel.find({selection : selecText},function (error,data) {
         res.send({error : error , data : data});
         console.log(data);
