@@ -21,6 +21,8 @@ user.get('/get' , function (req,res) {
     })
 });
 
+
+
 user.get('/getbyselection' , function (req,res) {
     console.log(req.query);
     userModel.find(req.query,function (error,data) {
@@ -30,8 +32,13 @@ user.get('/getbyselection' , function (req,res) {
     })
 });
 
-
-
-
+user.get('/deletebyselection' , function (req,res) {
+    console.log(req.query);
+    userModel.deleteOne(req.query,function (error,data) {
+        res.send({error : error , data : data});
+        console.log(data);
+        console.log(error)
+    })
+});
 
 module.exports = user;
