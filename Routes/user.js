@@ -41,4 +41,14 @@ user.get('/deletebyselection' , function (req,res) {
     })
 });
 
+
+user.get('/Editbyselection' , function (req,res) {
+    console.log(req.query);
+    userModel.deleteOne(req.query,function (error,data) {
+        res.send({error : error , data : data});
+        console.log(data);
+        console.log(error)
+    })
+});
+
 module.exports = user;
