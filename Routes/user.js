@@ -42,9 +42,9 @@ user.get('/deletebyselection' , function (req,res) {
 });
 
 
-user.get('/Editbyselection' , function (req,res) {
-    console.log(req.query);
-    userModel.findOneAndReplace(req.query,function (error,data) {
+user.post('/Editbyselection' , function (req,res) {
+    console.log(req.body);
+    userModel.findOneAndUpdate(req.body.find , req.body.replacement,function (error,data) {
         res.send({error : error , data : data});
         console.log(data);
         console.log(error)
